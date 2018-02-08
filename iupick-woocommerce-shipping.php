@@ -584,7 +584,7 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 
 								jQuery('#wf_iupick_id').val( iupick_object.id );
 
-								jQuery('#shipping_company').val( iupick_object.entity + ' ' + iupick_object.name );	
+								jQuery('#shipping_company').val( "Ocurre: " + iupick_object.entity + ' ' + iupick_object.name );	
 								jQuery('#shipping_address_1').val( iupick_object.address.line_one );
 								jQuery('#shipping_address_2').val( iupick_object.address.line_two );
 								jQuery('#shipping_postcode').val( iupick_object.address.postal_code.code );
