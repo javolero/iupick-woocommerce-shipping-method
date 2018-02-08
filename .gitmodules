@@ -1,4 +1,4 @@
 [submodule "iupick-php"]
 	path = iupick-php
-	url = https://github.com/iupickmx/iupick-php.git
+	url = https://github.com/javolero/iupick-php.git
 	branch = master
