@@ -352,16 +352,16 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 
 				$addInformation = Iupick\Shipment::addInformation($data);
 
-				$waybill = Iupick\Shipment::generateWaybill($shipmentToken);
+				//$waybill = Iupick\Shipment::generateWaybill($shipmentToken);
 
-				if( isset( $waybill['error'] ) && !empty( $waybill['error'] ) ){
+				if( isset( $addInformation['error'] ) && !empty( $addInformation['error'] ) ){
 
 					echo json_encode(array('status' => 'error', 'error' =>  $waybill['error'], 'html' => $html ));
 	            	wp_die();
 
 				}
 
-				add_post_meta( $post_id, 'wf_iupick_waybill', json_encode( $waybill ) );
+				add_post_meta( $post_id, 'wf_iupick_addinformation', json_encode( $addInformation ) );
 
 			}catch(Exception $ex){
 
