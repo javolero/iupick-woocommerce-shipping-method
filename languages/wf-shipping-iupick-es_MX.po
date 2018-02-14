@@ -1,0 +1,287 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: iupick WooCommerce Extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 06:53+0000\n"
+"PO-Revision-Date: 2018-02-14 06:53+0000\n"
+"Last-Translator: javolero <javolero@gmail.com>\n"
+"Language-Team: Spanish (Mexico)\n"
+"Language: es-MX\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: iupick-woocommerce-shipping.php:504
+msgid "Select one waypoint on the map"
+msgstr "Selecciona un punto de entrega"
+
+#. Name of the plugin
+msgid "iupick WooCommerce Extension"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/javolero/iupick-woocommerce-shipping-method"
+msgstr ""
+
+#. Author of the plugin
+msgid "javolero"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/javolero/"
+msgstr ""
+
+#: iupick-woocommerce-shipping.php:82
+msgid "Waypoint is needed"
+msgstr "Se necesita de un punto de entrega"
+
+#: iupick-woocommerce-shipping.php:112 iupick-woocommerce-shipping.php:143
+#: iupick-woocommerce-shipping.php:145
+msgid "You can pick up your order with your ID and tracking number."
+msgstr ""
+"Puedes recoger tu pedido presentando una identificación y tu número de guía"
+
+#: iupick-woocommerce-shipping.php:114 iupick-woocommerce-shipping.php:683
+msgid "Waypoint:"
+msgstr "Punto de entrega:"
+
+#: iupick-woocommerce-shipping.php:128 includes/data-wf-settings.php:44
+#: includes/class-wf-iupick-woocommerce-shipping.php:13
+msgid "IUPICK"
+msgstr "iuPick"
+
+#: iupick-woocommerce-shipping.php:152
+msgid "Company: "
+msgstr "Compañía: "
+
+#: iupick-woocommerce-shipping.php:152
+msgid "Tracking number: "
+msgstr "Número de guía: "
+
+#: iupick-woocommerce-shipping.php:202
+msgid "No packages found."
+msgstr "No se encontraron paquetes."
+
+#: iupick-woocommerce-shipping.php:209 iupick-woocommerce-shipping.php:210
+msgid "Length"
+msgstr "Largo"
+
+#: iupick-woocommerce-shipping.php:213 iupick-woocommerce-shipping.php:214
+msgid "Width"
+msgstr "Ancho"
+
+#: iupick-woocommerce-shipping.php:217 iupick-woocommerce-shipping.php:218
+msgid "Height"
+msgstr "Alto"
+
+#: iupick-woocommerce-shipping.php:221 iupick-woocommerce-shipping.php:222
+msgid "Weight"
+msgstr "Peso"
+
+#: iupick-woocommerce-shipping.php:228
+msgid "Shipping vendor"
+msgstr "Mensajería"
+
+#: iupick-woocommerce-shipping.php:232
+msgid "None"
+msgstr "Ninguno"
+
+#: iupick-woocommerce-shipping.php:241 iupick-woocommerce-shipping.php:242
+msgid "Tracking number"
+msgstr "Número de guía"
+
+#: iupick-woocommerce-shipping.php:245
+msgid "Create IUPICK shipping"
+msgstr "Enviar con iuPick"
+
+#: iupick-woocommerce-shipping.php:498
+msgid "Waypoint ID"
+msgstr "ID del punto de entrega"
+
+#: iupick-woocommerce-shipping.php:586
+msgid "You need select a waypoint on the map"
+msgstr "Debes seleccionar un punto de entrega en el mapa"
+
+#: iupick-woocommerce-shipping.php:590
+msgid "Select this waypoint override your previous shipping address, continue?"
+msgstr ""
+"Al seleccionar este punto reemplazarás el domicilio de entrega previo. "
+"¿Quieres continuar?"
+
+#: iupick-woocommerce-shipping.php:687
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: iupick-woocommerce-shipping.php:688
+msgid "Ok"
+msgstr "Ok"
+
+#: iupick-woocommerce-shipping.php:715
+msgid "Settings"
+msgstr "Ajustes"
+
+#: includes/data-wf-settings.php:18
+msgid "Enabled IUPICK"
+msgstr "Activar iuPick"
+
+#: includes/data-wf-settings.php:24
+msgid "Enabled iupick"
+msgstr "Activar iuPick"
+
+#: includes/data-wf-settings.php:25
+msgid "Override flat rate shipping with iupick"
+msgstr "Reemplazar el envío de Tarifa Fija de WooCommerce con iuPick"
+
+#: includes/data-wf-settings.php:26
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: includes/data-wf-settings.php:32
+msgid "Shipping cost"
+msgstr "Costo del envío"
+
+#: includes/data-wf-settings.php:34
+msgid "Cost"
+msgstr "Costo"
+
+#: includes/data-wf-settings.php:41
+msgid "Method Title"
+msgstr "Título para el método de envío"
+
+#: includes/data-wf-settings.php:43
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+"Se muestra como el nombre del tipo de envío que tus clientes ven cuando "
+"finalizan su pedido."
+
+#: includes/data-wf-settings.php:48
+msgid "IUPICK Secret token"
+msgstr "iuPick Secret Token"
+
+#: includes/data-wf-settings.php:50
+msgid "Secret token ."
+msgstr "Secret Token."
+
+#: includes/data-wf-settings.php:54
+msgid "IUPICK Public token"
+msgstr "iuPick Public Token"
+
+#: includes/data-wf-settings.php:56
+msgid "Public token."
+msgstr "Public Token."
+
+#: includes/data-wf-settings.php:61
+msgid "Sandbox IUPICK Secret token"
+msgstr "Sanbox iuPick Secret Token"
+
+#: includes/data-wf-settings.php:63
+msgid "Sandbox Secret token ."
+msgstr "Sandbox Secret Token."
+
+#: includes/data-wf-settings.php:67
+msgid "Sandbox IUPICK Public token"
+msgstr "Sandbox iuPick Public Token"
+
+#: includes/data-wf-settings.php:69
+msgid "Sandbox Public token."
+msgstr "Sandbox Publick Token."
+
+#: includes/data-wf-settings.php:74
+msgid "Sandbox"
+msgstr "Sandbox"
+
+#: includes/data-wf-settings.php:75
+msgid "Enable sandbox mode"
+msgstr "Activar modo Sandbox"
+
+#: includes/data-wf-settings.php:79
+msgid "Enable sandbox mode to use sandbox environmnet"
+msgstr "Utiliza el modo Sandbox para usar un ambiente te pruebas"
+
+#: includes/data-wf-settings.php:82
+msgid "Debug Mode"
+msgstr "Depuración de errores"
+
+#: includes/data-wf-settings.php:83
+msgid "Enable debug mode"
+msgstr "Activar depuración de errores (Debug)"
+
+#: includes/data-wf-settings.php:87
+msgid "Enable debug mode to show debugging information on the cart/checkout."
+msgstr ""
+"Activa la depuración de errores para mostrar información de errores en el "
+"carrito y checkout"
+
+#: includes/data-wf-settings.php:93
+msgid "Shop Reference (required)"
+msgstr "Referencia de Comercio*"
+
+#: includes/data-wf-settings.php:95
+msgid "IUPICK shop reference"
+msgstr "Referencia de comercio iuPick"
+
+#: includes/data-wf-settings.php:102
+msgid "Shipper name (required)"
+msgstr "Nombre del remitente*"
+
+#: includes/data-wf-settings.php:107
+msgid "Shipper phone (required)"
+msgstr "Teléfono del remitente*"
+
+#: includes/data-wf-settings.php:112
+msgid "Shipper email (required)"
+msgstr "Email del remitente*"
+
+#: includes/data-wf-settings.php:117
+msgid "Shipper title"
+msgstr "Título del remitente"
+
+#: includes/data-wf-settings.php:122
+msgid "Shipper company (required)"
+msgstr "Compañía remitente*"
+
+#: includes/data-wf-settings.php:127
+msgid "Shipper phone extension "
+msgstr "Extensión telefónica del remitente "
+
+#: includes/data-wf-settings.php:133
+msgid "Shipper Address city (required)"
+msgstr "Ciudad del remitente*"
+
+#: includes/data-wf-settings.php:142
+msgid "Shipper Address State (required)"
+msgstr "Estado del remitente*"
+
+#: includes/data-wf-settings.php:152
+msgid "Shipper Address line one (required)"
+msgstr "Domicilio del remitente - Línea 1*"
+
+#: includes/data-wf-settings.php:156
+msgid "Shipper Address line two (required)"
+msgstr "Domicilio del remitente - Línea 2*"
+
+#: includes/data-wf-settings.php:160
+msgid "Shipper Address neighborhood (required)"
+msgstr "Colonia del remitente*"
+
+#: includes/data-wf-settings.php:164
+msgid "Shipper Address postal_code (required)"
+msgstr "Código Postal del remitente*"
+
+#: includes/class-wf-iupick-woocommerce-shipping.php:14
+msgid "Obtains  real time shipping waypints."
+msgstr "Obtiene puntos de entrega en tiempo real."
+
+#: includes/class-wf-iupick-woocommerce-shipping.php:83
+msgid ""
+"IUPICK debug mode is on - to hide these messages, turn debug mode off in the "
+"settings."
+msgstr ""
+"El modo debug de iuPick está activado - para ocultar estos mensajes, "
+"desactiva el modo de depuración de errores en los ajustes de iuPick."
+
+#. Description of the plugin
+msgid "Obtain real time shipping waypoints."
+msgstr "Obtén puntos de entrega en tiempo real."

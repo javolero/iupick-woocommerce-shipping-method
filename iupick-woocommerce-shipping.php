@@ -7,6 +7,7 @@
 	Author: javolero
 	Author URI: https://github.com/javolero/
 	Text Domain: wf-shipping-iupick
+	Domain Path: /languages
 */
 if (!defined('WF_IUPICK_ID')){
 	define("WF_IUPICK_ID", "wf_iupick_woocommerce_shipping");
@@ -28,10 +29,18 @@ function wf_iupick_plugin_pre_activation_check(){
 }
 register_activation_hook( __FILE__, 'wf_iupick_plugin_pre_activation_check' );
 
+add_action( 'plugins_loaded', 'iupick_load_textdomain' );
+
+function iupick_load_textdomain() {
+  load_plugin_textdomain( 'wf-shipping-iupick' , false, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+
 /**
  * Check if WooCommerce is active
  */
 if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )) {	
+
+	
 
 
 	wp_register_script('iupick-js', "https://s3-us-west-1.amazonaws.com/iupick-map/iupick-map.js", array(), WF_IUPICK_VERSION , true);
@@ -492,7 +501,7 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 							), $checkout->get_value( 'wf_iupick_id' ));
 					?>
 
-					<a href="#" class="btn-select-waypoint button"><?= __('Select one waypoint on the map') ?></a>
+					<a href="#" class="btn-select-waypoint button"><?= __('Select one waypoint on the map', 'wf-shipping-iupick') ?></a>
 
 					
 
@@ -694,7 +703,7 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 			}
 			public function wf_init() {
 				// Localisation
-				load_plugin_textdomain( 'wf-shipping-iupick' , false, dirname( plugin_basename( __FILE__ ) ) . '/i18n/' );
+				
 			}
 			
 			public function wf_iupick_scripts() {

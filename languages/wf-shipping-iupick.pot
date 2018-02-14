@@ -3,100 +3,104 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-08 01:54+0000\n"
+"POT-Creation-Date: 2018-02-14 06:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Loco - https://localise.biz/"
 
-#: iupick-woocommerce-shipping.php:73
+#: iupick-woocommerce-shipping.php:82
 msgid "Waypoint is needed"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:103 iupick-woocommerce-shipping.php:134
-#: iupick-woocommerce-shipping.php:136
+#: iupick-woocommerce-shipping.php:112 iupick-woocommerce-shipping.php:143
+#: iupick-woocommerce-shipping.php:145
 msgid "You can pick up your order with your ID and tracking number."
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:105 iupick-woocommerce-shipping.php:674
+#: iupick-woocommerce-shipping.php:114 iupick-woocommerce-shipping.php:683
 msgid "Waypoint:"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:119 includes/data-wf-settings.php:44
+#: iupick-woocommerce-shipping.php:128 includes/data-wf-settings.php:44
 #: includes/class-wf-iupick-woocommerce-shipping.php:13
 msgid "IUPICK"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:143
+#: iupick-woocommerce-shipping.php:152
 msgid "Company: "
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:143
+#: iupick-woocommerce-shipping.php:152
 msgid "Tracking number: "
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:193
+#: iupick-woocommerce-shipping.php:202
 msgid "No packages found."
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:200 iupick-woocommerce-shipping.php:201
+#: iupick-woocommerce-shipping.php:209 iupick-woocommerce-shipping.php:210
 msgid "Length"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:204 iupick-woocommerce-shipping.php:205
+#: iupick-woocommerce-shipping.php:213 iupick-woocommerce-shipping.php:214
 msgid "Width"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:208 iupick-woocommerce-shipping.php:209
+#: iupick-woocommerce-shipping.php:217 iupick-woocommerce-shipping.php:218
 msgid "Height"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:212 iupick-woocommerce-shipping.php:213
+#: iupick-woocommerce-shipping.php:221 iupick-woocommerce-shipping.php:222
 msgid "Weight"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:219
+#: iupick-woocommerce-shipping.php:228
 msgid "Shipping vendor"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:223
+#: iupick-woocommerce-shipping.php:232
 msgid "None"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:232 iupick-woocommerce-shipping.php:233
+#: iupick-woocommerce-shipping.php:241 iupick-woocommerce-shipping.php:242
 msgid "Tracking number"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:236
+#: iupick-woocommerce-shipping.php:245
 msgid "Create IUPICK shipping"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:489
+#: iupick-woocommerce-shipping.php:498
 msgid "Waypoint ID"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:577
+#: iupick-woocommerce-shipping.php:504
+msgid "Select one waypoint on the map"
+msgstr ""
+
+#: iupick-woocommerce-shipping.php:586
 msgid "You need select a waypoint on the map"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:581
+#: iupick-woocommerce-shipping.php:590
 msgid "Select this waypoint override your previous shipping address, continue?"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:678
+#: iupick-woocommerce-shipping.php:687
 msgid "Cancel"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:679
+#: iupick-woocommerce-shipping.php:688
 msgid "Ok"
 msgstr ""
 
-#: iupick-woocommerce-shipping.php:706
+#: iupick-woocommerce-shipping.php:715
 msgid "Settings"
 msgstr ""
 
