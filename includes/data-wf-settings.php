@@ -91,7 +91,7 @@ return array(
 	'maps_api'=> array(
 		'title'           => __( 'Google Maps Api Key', 'wf-shipping-iupick' ),
 		'type'            => 'text',
-		'description'     => __( 'Google Maps Api Key.', 'wf-shipping-iupick' ),
+		'description'     => __( 'Obtén una API Key de Google <a href="https://developers.google.com/maps/documentation/javascript/get-api-key?hl=ES" target="_blank">aquí</a>', 'wf-shipping-iupick' ),
 		'default'         => 'AIzaSyCaI8tlA-dmA_hf3Y6F6KW5LoYSw8smmuY'
     ),
 
