@@ -43,12 +43,12 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 	
 
 
-	wp_register_script('iupick-js', "https://s3-us-west-1.amazonaws.com/iupick-map/iupick-map.js", array(), WF_IUPICK_VERSION , true);
+	wp_register_script('iupick-js', "https://s3-us-west-1.amazonaws.com/iupick-map/jquery-iupick-map.js", array('jquery'), WF_IUPICK_VERSION , true);
 
 	//wp_register_script('iupick-js', plugins_url('iupick.js', __FILE__), array('jquery'), WF_IUPICK_VERSION , true);
 	
-	wp_enqueue_style('iupick-leaflet', 'https://unpkg.com/leaflet@1.2.0/dist/leaflet.css', array(), WF_IUPICK_VERSION );
-	wp_enqueue_style('iupick-markercluster', 'https://unpkg.com/leaflet.markercluster@1.2.0/dist/MarkerCluster.Default.css', array('iupick-leaflet'), WF_IUPICK_VERSION );
+	//wp_enqueue_style('iupick-leaflet', 'https://unpkg.com/leaflet@1.2.0/dist/leaflet.css', array(), WF_IUPICK_VERSION );
+	wp_enqueue_style('iupick-css', 'https://s3-us-west-1.amazonaws.com/iupick-map/iupick-style.css', array(), WF_IUPICK_VERSION );
 
 
 	add_action('admin_enqueue_scripts', 'iupick_admin_js');
@@ -482,6 +482,8 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
         			$public_token = $shipping_methods[ WF_IUPICK_ID ]->settings['public_token_sandbox'];
         		}
 
+        		$maps_api = $shipping_methods[ WF_IUPICK_ID ]->settings['maps_api'];
+
             	if ( is_checkout() ) {
 
             		//wp_enqueue_script('iupick-markercluster');
@@ -508,26 +510,33 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 					
 
 					<script type="text/javascript">
-						var iupick_token = 'Token <?= $public_token ?>'
-						var iupick_main = 'iupick_main';
-						var iupick_map = 'iupick_map';
-						var iupick_init = false;
 						var iupick_object = null;
 						var iupick_disable_autoload = true;
+
+						var iupickButton;
+
+						function initIupickMap(){
+					        iupickButton.initMap();
+					      }
+
+						jQuery(function(){
+
+					        iupickButton = jQuery('.btn-select-waypoint').iupickmap({
+					          google_maps_api_key: '<?= $maps_api ?>',
+					          iupick_token: 'Token <?= $public_token ?>',
+					          input_box_placeholder: '<?= __('Escribe tu dirección o CP', 'wf-shipping-iupick') ?>',
+					          callback_function: selectedWaypoint,
+					          is_sandbox: true
+					        });
+
+					      });
 
 						var iupick_moved = false;
 
 						var use_iupick = false;
 						var enabled_all = <?= ($enabled === 'override')?'true':'false' ?>;
 
-						function selectedWaypoint(waypoint) {
-							//console.log('Selected Waypoint:', waypoint);
-
-							iupick_object = waypoint;
-
-							jQuery('.wf_iupick_preview').text( iupick_object.entity + ' ' + iupick_object.name );
-							
-						}
+						
 
 						jQuery( document ).on( 'updated_checkout', function() {
 
@@ -538,7 +547,6 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 
 						    	if( !iupick_moved ){
 						    		jQuery( '#woocommerce-iupick' ).insertBefore('.woocommerce-shipping-fields');
-						    		jQuery('.iupick-modal').prependTo('body');
 						    		iupick_moved = true;
 						    	}
 						    }else{
@@ -551,35 +559,20 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 						jQuery('body').on('change', '.shipping_method', function(){
 
 							if( jQuery('.shipping_method:checked').val() === 'IUPICK' ){
-								jQuery('.iupick-modal').show();
+								
 								iupick_object = null;
-						    	if( !iupick_init ){
-						    		initIupickMap();
-						    		iupick_init = true;	
-						    	}
+
+								jQuery('.btn-select-waypoint').click();
+						    	
 							}
 
 						});
 
-						jQuery('body').on('click', '.btn-select-waypoint', function(e){
-							e.preventDefault();
 
-							jQuery('.iupick-modal').show();
-							iupick_object = null;
-					    	if( !iupick_init ){
-					    		initIupickMap();
-					    		iupick_init = true;	
-					    	}
-						});
+						function selectedWaypoint(waypoint) {
+							//console.log('Selected Waypoint:', waypoint);
 
-						jQuery('body').on('click', '.btn-cancel-waypoint', function(e){
-							e.preventDefault();
-
-							jQuery('.iupick-modal').hide();
-						});
-
-						jQuery('body').on('click', '.btn-ok-waypoint', function(e){
-							e.preventDefault();
+							iupick_object = waypoint;
 
 							
 							if( iupick_object == null ){
@@ -604,10 +597,8 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 								jQuery('#ship-to-different-address-checkbox').prop('checked', true).change();
 
 							}
-
-							jQuery('.iupick-modal').hide();
 							
-						});
+						}
 
 
 						jQuery(function(){
@@ -625,43 +616,12 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 							display: none;
 						}*/
 
-						.iupick-modal {
-							display: none;
-						    position: fixed;
-						    top: 0;
-						    width: 100vw;
-						    height: 100vh;
-						    padding: 5vh 5vw 5vh 5vw;
-						    left: 0;
-						    background: rgba(1,1,1,.5);
-						    z-index: 99999;
-						    
-						}
-						.iupick-inner{
-							width: 90vw;
-							height: 90vh;
-							background: white;
-							overflow: scroll;
-						}
-
-						.iupick-inner .iupick-actions{
-							padding: 10px;
-							text-align: center;
-						}
+						
 
 						#wf_iupick_id_field{
 							display: none;
 						}
 
-
-
-
-						
-						
-						#iupick_map{
-							width: 100%;
-							height: 400px;
-						}
 
 						.waypoint-text{
 							width: 100%;
@@ -670,26 +630,6 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 					</style>
 					
 					
-				</div>
-
-				<div class="iupick-modal">
-					<div class="iupick-inner">
-						
-						
-
-						<div class="iupick-actions">
-
-							<p class="form-row">
-								<label><?= __('Waypoint:', 'wf-shipping-iupick') ?></label>
-								<span class="waypoint-text wf_iupick_preview"></span>
-							</p>
-
-							<a href="#" class="button btn-cancel-waypoint"><?= __('Cancel', 'wf-shipping-iupick') ?></a>
-							<a href="#" class="button btn-ok-waypoint"><?= __('Ok', 'wf-shipping-iupick') ?></a>
-						</div>
-						<div id="iupick_map" ></div>
-						<div id="iupick_main"></div>
-					</div>
 				</div>
 
 				<?php

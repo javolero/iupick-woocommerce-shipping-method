@@ -88,6 +88,14 @@ return array(
 	),
 
 
+	'maps_api'=> array(
+		'title'           => __( 'Google Maps Api Key', 'wf-shipping-iupick' ),
+		'type'            => 'text',
+		'description'     => __( 'Google Maps Api Key.', 'wf-shipping-iupick' ),
+		'default'         => 'AIzaSyCaI8tlA-dmA_hf3Y6F6KW5LoYSw8smmuY'
+    ),
+
+
 
 	'reference'            => array(
 		'title'           => __( 'Shop Reference (required)', 'wf-shipping-iupick' ),
