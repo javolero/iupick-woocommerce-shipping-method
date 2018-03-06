@@ -477,9 +477,13 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
         		$secret_token = $shipping_methods[ WF_IUPICK_ID ]->settings['secret_token'];
         		$public_token = $shipping_methods[ WF_IUPICK_ID ]->settings['public_token'];
 
+        		$is_sandbox = 'false';
+
         		if( $shipping_methods[ WF_IUPICK_ID ]->settings['sandbox'] === 'yes' ){
         			$secret_token = $shipping_methods[ WF_IUPICK_ID ]->settings['secret_token_sandbox'];
         			$public_token = $shipping_methods[ WF_IUPICK_ID ]->settings['public_token_sandbox'];
+
+        			$is_sandbox = 'true';
         		}
 
         		$maps_api = $shipping_methods[ WF_IUPICK_ID ]->settings['maps_api'];
@@ -526,7 +530,7 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 					          iupick_token: 'Token <?= $public_token ?>',
 					          input_box_placeholder: '<?= __('Escribe tu dirección o CP', 'wf-shipping-iupick') ?>',
 					          callback_function: selectedWaypoint,
-					          is_sandbox: true
+					          is_sandbox: <?= $is_sandbox ?>
 					        });
 
 					      });
